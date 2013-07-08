@@ -1,0 +1,30 @@
+<div data-options="dxView : { name: 'WeightGraphs', title: 'Graphs' } " >
+   
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div id="tabs" data-bind="dxTabs: tabOptions"></div>        
+        <div class="content full-height">
+
+            <div class="graph-settings">
+                  <select data-bind="options: exerciseTypes,
+                        value: selectedExerciseType,
+                        optionsCaption: 'choose exercise'"></select>             
+                   <select data-bind="options: equipmentTypes,
+                        value: selectedEquipmentType,
+                        optionsCaption: 'choose equipment'"></select>         
+            </div>
+            <!-- ko if: weightParamsFilled  -->
+                <!-- ko if: isWeightDataLoaded -->
+                    <!-- ko if: weightChartHasData() -->
+                    <div class="graph-area">
+                        <div id="weightChart" class="graph-container with-selects" data-bind="dxChart: weightChartOptions"></div> 
+                    </div>  
+                    <!-- /ko -->
+                    <!-- ko if: !weightChartHasData() -->
+                        <div class="graph-empty-comment">There are no exercises of this type</div>
+                    <!-- /ko -->
+                <!-- /ko -->
+            <!-- /ko -->
+
+        </div>          
+    </div>
+</div>

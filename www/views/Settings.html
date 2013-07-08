@@ -1,0 +1,32 @@
+<div data-options="dxView : { name: 'Settings', title: 'Settings' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div class="dx-fieldset settings-form">
+          <div class="dx-field dx-field-select">
+            <div class="dx-field-label"><span>Length Units</span></div>
+            <div class="dx-field-value">
+                <select data-bind="options: lengthUnits, value: length"></select>
+            </div>
+          </div>
+
+          <div class="dx-field dx-field-select">
+            <div class="dx-field-label"><span>Weight Units</span></div>
+            <div class="dx-field-value">
+                <select data-bind="options: weightUnits, value: weight"></select>
+            </div>
+          </div>
+
+          <div class="dx-field with-lookup-arrow" data-bind="event: { click: editGoals }">
+              <div class ="dx-field-label">Goals</div>
+          </div>
+
+          <div class="dx-field with-lookup-arrow" data-bind="event: { click: editExercises }">
+              <div class ="dx-field-label">Exercises</div>
+          </div>
+
+          <div class="dx-field with-lookup-arrow" data-bind="event: { click: editEquipment }">
+              <div class ="dx-field-label">Equipment</div>
+          </div>
+        </div>
+    </div>
+    
+</div>

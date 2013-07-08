@@ -1,0 +1,15 @@
+<div data-options="dxView : { name: 'Log', title: 'Workout Logs' } " >
+    <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+        <div data-bind="dxList: { dataSource: log, grouped: true, itemClickAction: handleItemClick }">
+            <div data-options="dxTemplate : { name: 'item' } " >
+                <div class="log-list-item list-item-title">
+                    <span data-bind="text: title"></span>
+                </div>
+                <div class="log-list-commands">
+                    <div data-bind="dxButton: { text: 'Copy', clickAction: $root.handleCopyClick }"></div>
+                    <div data-bind="dxButton: { text: 'Delete', clickAction: $root.handleDeleteClick }"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
