@@ -6,13 +6,13 @@
     versionCode="1"
     version="0.0.1">
    
-    <name>Comunicação Interna</name>
+    <name>Comunicacao Interna</name>
 
     <description>
-        Arquivo para demonstração de vendas diaria
+        Arquivo para demonstracao de vendas diaria
     </description>
 
-    <author href="http://www.devexpress.com">
+    <author href="http://www.encontrediarista.com.br">
         Daniel Barros
     </author>
 
