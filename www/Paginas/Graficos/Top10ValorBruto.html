@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+        <link href="../../jquery-mobile/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+    <script src="../../jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
+    <script src="../../jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+    
+    
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    
+    
+</head>
+
+<body>
+<div data-role="page" id="Top10ValorBruto">
+  <div data-role="header">
+    <h1>Top 10 Valor Bruto</h1>
+  </div>
+  <div data-role="content"><div id="chart_div"></div></div>
+ <div data-role="footer" data-position="fixed" data-id="divfooter">
+    <div data-role="navbar">
+    <ul>
+    <li><a data-icon="home" href="../home.html">Home</a></li>
+    <li><a data-icon="grid" href="../Relatorios/index.html">Relatórios</a></li>
+    <li><a class="ui-btn-active" data-icon="gear" href="index.html">Gráficos</a></li>
+    
+    </ul>
+    </div>
+    </div>
+</div>
+
+
+</body>
+</html>
